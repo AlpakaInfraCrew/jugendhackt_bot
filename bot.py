@@ -20,6 +20,9 @@ async def chat_id(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def sso(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text('https://auth.alpaka.space')
 
+async def sourcecode(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.message.reply_text('Meinen Sourcecode findest du hier: https://github.com/AlpakaInfraCrew/jugendhackt_bot')
+
 async def status(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     import subprocess
     python_path = "/usr/bin/python3"
@@ -60,6 +63,7 @@ def main() -> None:
     application.add_handler(CommandHandler("sso", sso))
     application.add_handler(CommandHandler("status", status))
     application.add_handler(CommandHandler("ende", ende))
+    application.add_handler(CommandHandler("source", sourcecode))
     application.add_handler(CallbackQueryHandler(button))
     application.run_polling()
 
