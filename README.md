@@ -14,7 +14,7 @@ A simple Telegram bot for Alpaka Infra Crew
 
 - `git clone https://github.com/AlpakaInfraCrew/jugendhackt_bot`
 - `cp example.env .env`
-- edit .env
+- edit .env with your favourite editor (i.e. `vim .env`)
 - `pip install -r requirements.txt`
 - `python bot.by`
 - ...
@@ -24,9 +24,13 @@ A simple Telegram bot for Alpaka Infra Crew
 
 - `adduser telegrambot`
 - `cd /home/telegrambot`
+- `su telegrambot`
 - `git clone https://github.com/AlpakaInfraCrew/jugendhackt_bot`
+- `cd jugendhackt_bot`
 - `cp example.env .env`
-- edit .env
+- edit .env with your favourite editor (i.e. `vim .env`)
+- `exit`
+- `cd /home/telegrambot/jugendhackt_bot`
 - `pip install -r requirements.txt`
 - `cp ./telegrambot.service /etc/systemd/system/telegrambot.service`
 - `systemctl daemon-reload`
