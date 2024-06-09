@@ -6,7 +6,8 @@ After=network.target
 Type=simple
 User=telegrambot
 Group=telegrambot
-ExecStart=/usr/bin/python3 /home/telegrambot/bot.py
+WorkingDirectory=/home/telegrambot/jugendhackt_bot/
+ExecStart=/usr/bin/python3 bot.py
 
 [Install]
 WantedBy=multi-user.target
