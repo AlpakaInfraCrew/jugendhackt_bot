@@ -1,0 +1,12 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=telegrambot
+Group=telegrambot
+ExecStart=/usr/bin/python3 /home/telegrambot/bot.py
+
+[Install]
+WantedBy=multi-user.target
